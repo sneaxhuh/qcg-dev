@@ -1,0 +1,225 @@
+.main {
+    position: absolute;
+    background-color: black;
+    
+    inset:0
+    
+}
+
+.heading1 {
+    font-size: 60px;
+    color: white;
+
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+
+}
+
+.heading2 {
+    font-size: 20px;
+    color: white;
+}
+
+.ok {
+    color: #c434b8;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.gallery {
+    margin-top: 20px;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.images {
+    
+   align-items: center;
+    display: flex;
+    column-gap: 40px;
+
+}
+
+.title {
+    font-size: 30px;
+}
+
+.navigate {
+    background-color: transparent;
+    margin-top: -20px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.navigate:hover {
+    color: white;
+}
+
+
+.hey {
+    font-size: 100px;
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #c434b8;
+    padding: 5px;
+    background-clip: content-box;
+    position: relative;
+    overflow: hidden;
+    border-radius: 7px;
+    
+}
+
+.yes {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.3s;
+    border-radius: 7px;
+}
+
+
+
+
+.img:hover .yes {
+    transform: scale(1.2);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Align the overlay content to the bottom */
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(100%);
+    /* Initially position the overlay below */
+
+}
+
+.img:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+    /* Move the overlay to its original position */
+}
+
+.overlay-text {
+    color: #c434b8;
+  
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+}
+
+:root {
+    --clr-neon: hsl(317 100% 54%);
+    --clr-bg: hsl(323 21% 16%);
+    --clr-hover-font: #000;
+    --clr-hover-bg: hsl(317 100% 54%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.neon-button {
+    font-size: 18px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    height: 40px;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    position: relative;
+    transition: color 100ms linear, background-color 100ms linear;
+    margin-top: 30px;
+
+}
+
+.neon-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-neon);
+    opacity: 0;
+    background-color: var(--clr-neon);
+    z-index: -1;
+    transition: opacity 100ms linear;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+    color: var(--clr-hover-font);
+    background-color: var(--clr-hover-bg);
+    text-shadow: none;
+}
+
+.neon-button:hover::before,
+.neon-button:focus::before,
+.neon-button:hover::after,
+.neon-button:focus::after {
+    opacity: 1;
+}
+
+.detail {
+    font-size: 14px;
+    color: white;
+    margin-top: 5px
+}
+
+.swiper-navBtn {
+    opacity: 0;
+    font-size: 10px;
+    padding-top: 55px;
+    transition: opacity 0.1s ease;
+}
+
+.swiper-navBtn:hover {
+    color: white;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet {
+    background-color: #ef88e6 !important;
+    opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+    background-color: #c434b8 !important;
+    
+}
+
+
+
+
+
